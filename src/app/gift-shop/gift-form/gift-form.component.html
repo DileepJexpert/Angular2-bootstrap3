@@ -1,0 +1,29 @@
+
+
+
+<div class="container">
+	<div class="row">
+		<h2>Customize Gift </h2>
+	</div>
+    <form  [formGroup]="parent" action="#">
+      <div class="section" formGroupName="userDetails">
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group form-group-sm">
+                        <label for="firstname" class="control-label">Name</label>
+                        <input type="text" class="form-control" id="firstname" formControlName ="firstname" placeholder="Firstname">
+                    </div>
+                </div>
+        </div>
+      </div>
+       <app-gift-creator>
+
+       </app-gift-creator>
+       <app-gift-summary>
+         
+       </app-gift-summary>
+    </form>
+
+
+
+</div>

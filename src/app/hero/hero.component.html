@@ -1,0 +1,92 @@
+<app-topnav></app-topnav>
+<div class="container">
+  <div class="panel panel-default">
+
+    <nav>
+      <a routerLink="/hero">Dashboard</a>
+      <a routerLink="list">Heroes</a>
+    </nav>
+
+
+    <router-outlet></router-outlet>
+  </div>
+  <!--<div class="panel panel-default">
+  <div class="panel-body">
+ <h1>{{title}}</h1>
+    <h2>first employee is: {{myHero}}</h2>
+    <p *ngIf="heroes.length > 3">There are many heroes!</p>
+
+    <p>employees:</p>
+    <ul>
+      <li *ngFor="let hero of heroess">
+        {{ hero.id + " "+hero.name }}
+      </li>
+    </ul>
+  </div></div>-->
+
+  <!--new work here-->
+
+  <!--<div class="grid grid-pad">
+ <a *ngFor="let hero of heroes"  [routerLink]="['/detail', hero.id]"  class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>-->
+
+  <!-- <ul class="heroes">
+        <li *ngFor="let hero of heroesArray " (click)="onSelect(hero)">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+
+      </ul>
+      <hero-detail [heroInput]="selectedHero"></hero-detail>-->
+
+  <!--  <div *ngIf="selectedHero">
+      <h2>{{selectedHero.name}} details!</h2>
+      <div><label>id: </label>{{selectedHero.id}}</div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+      </div>
+    </div>-->
+
+
+
+
+  <button (click)="onClickMe()">Click me!</button> {{clickMessage}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Panel title</h3>
+    </div>
+    <div class="panel-body">
+
+      <input (keyup)="onKey($event)">
+      <p>{{values}}</p>
+
+      <input #box (keyup)="0">
+      <p>{{box.value}}</p>
+      <p>on enter test</p>
+      <input #boxx (keyup.enter)="onEnter(boxx.value)">
+      <p>{{value}}</p>
+      <p>on blur test</p>
+
+      <input #boxe (keyup.enter)="update(boxe.value)" (blur)="update(boxe.value)">
+
+      <p>{{value}}</p>
+
+
+      <p>on blur and enter both test with push test</p>
+
+      <input #newHero (keyup.enter)="addHero(newHero.value)" (blur)="addHero(newHero.value); newHero.value='' ">
+
+      <button (click)="addHero(newHero.value)">Add</button>
+
+      <ul>
+        <li *ngFor="let hero of heroesss">{{hero}}</li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    hero works!
+  </p>

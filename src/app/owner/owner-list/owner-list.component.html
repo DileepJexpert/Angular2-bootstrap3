@@ -1,0 +1,38 @@
+<p>
+  owner-list works!
+</p>
+<section id="owners" class="sections">
+<div class="container">
+    <a class="btn btn-primary pull-right" href="#" data-ui-sref="owners">See All Owners <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    <h2 class="sub-header">Owners</h2>
+
+
+  
+   
+  
+    <div class="row"  *ngIf="owners">
+      <div class="col-xs-18 col-sm-6 col-md-3" *ngFor="let user of owners">
+          <div class = "thumbnail"> <a [routerLink]="['/owner',user.id]">
+             <img [src]="user.avatar" class="user-avatar  img-circle"></a>
+              <div class="caption">
+               <h3 class="caption-heading"> <a [routerLink]="['/home/owner',user.id]">{{ user.first_name }} {{ user.last_name }}
+                </a></h3>
+                 <p class="caption-meta" >test</p>
+            <p class="caption-meta"><span class="glyphicon glyphicon-phone-alt"></span> <span></span></p>
+              </div>
+               <div class="action-bar">
+            <ul>
+              <li>
+                <a [routerLink]="['/about']"><img src=""  class="img-circle img-circle-small" alt="Generic placeholder image" height="30" width="30"></a>
+              </li>
+              <li>
+                <a [routerLink]="['/owner',user.id]" class="btn-add-pet"><span class="glyphicon glyphicon-plus"></span></a>
+              </li>
+            </ul>
+          </div>
+          </div>
+     
+    </div>
+  </div>
+     
+</div></section>

@@ -1,0 +1,51 @@
+
+<div class="container">
+	<div class="row">
+	</div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="" />
+                </div>
+                <div class="content">
+                    <p>Web Developer <br>
+                       More description here</p>
+                    <p><button type="button" onclick="" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="" />
+                </div>
+                <div class="content">
+                    <p>Web Developer <br>
+                       More description here</p>
+                    <p><button type="button" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="" />
+                </div>
+                <div class="content">
+                    <p>Web Developer <br>
+                       More description here</p>
+                    <p><button type="button" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div *ngIf="users">
+<div *ngFor="let user of users">
+{{user.first_name}}
+ </div ></div>

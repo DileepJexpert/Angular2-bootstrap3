@@ -1,0 +1,43 @@
+<app-topnav>
+</app-topnav>
+
+<p>
+  owner-details works!
+</p>
+<div class="container">
+<form [formGroup]="orderForm" (ngSubmit)="onSubmitForm()">  
+  <label for="name">Your Name</label>
+  <input id="name" type="text" formControlName="customerName">
+  <p>Add syrups</p>
+  <ul formGroupName="syrups">
+    <li>
+      <input id="vanilla" type="checkbox" formControlName="vanilla">
+      <label for="vanilla">vanilla</label>
+    </li>
+    <li>
+      <input id="caramel" type="checkbox" formControlName="caramel">
+      <label for="caramel">caramel</label>
+    </li>
+    <li>
+      <input id="hazelnut" type="checkbox" formControlName="hazelnut">
+      <label for="hazelnut">hazelnut</label>
+    </li>
+  </ul>
+  <section>
+    <p>Any special requests?</p>
+    <ul formArrayName="specialRequests">
+      <li *ngFor="let item of orderForm.controls.specialRequests.controls; let i = index">
+        <input type="text" formControlName="{{i}}">
+        <button type="button" title="Remove Request" 
+          (click)="onRemoveSpecialRequest(i)">Remove</button>
+      </li>
+    </ul>
+    <button type="button" (click)="onAddSpecialRequest()">
+      Add a Request
+    </button>
+  </section>
+  <button type="submit" class="btn btn-success" [disabled]="!orderForm.valid">
+    Place Order
+  </button>
+</form>  
+</div>
